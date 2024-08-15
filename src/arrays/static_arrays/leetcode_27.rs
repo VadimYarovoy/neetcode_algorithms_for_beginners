@@ -19,7 +19,7 @@ mod static_array_tests {
 
     #[test]
     fn simple_case() {
-        let mut nums = [3,2,2,3];
+        let mut nums = [3, 2, 2, 3];
         let new_len = _remove_element(&mut nums, 3) as usize;
         assert_eq!(new_len, 2);
         assert_eq!(nums[..new_len], [2, 2]);
