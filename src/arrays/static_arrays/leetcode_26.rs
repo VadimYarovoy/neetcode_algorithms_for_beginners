@@ -18,7 +18,7 @@ mod remove_duplicates_tests {
     use super::_remove_duplicates;
 
     #[test]
-    fn test_one_duplicate() {
+    fn one_duplicate() {
         let mut nums = [1, 1, 2];
         let new_len = _remove_duplicates(&mut nums) as usize;
         assert_eq!(new_len, 2);
@@ -26,7 +26,7 @@ mod remove_duplicates_tests {
     }
 
     #[test]
-    fn test_many_duplicates() {
+    fn many_duplicates() {
         let mut nums = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4];
         let new_len = _remove_duplicates(&mut nums) as usize;
         assert_eq!(new_len, 5);
