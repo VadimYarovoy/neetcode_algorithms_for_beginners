@@ -1,0 +1,6 @@
+[package]
+name = "neetcode_algorithms_for_beginners"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
