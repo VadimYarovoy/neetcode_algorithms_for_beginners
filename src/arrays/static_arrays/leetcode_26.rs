@@ -2,6 +2,7 @@
 // Time O(n), Space O(1)
 fn _remove_duplicates(nums: &mut [i32]) -> i32 {
     let mut l = 1;
+
     for r in 1..nums.len() {
         if nums[r] != nums[r - 1] {
             nums[l] = nums[r];
@@ -13,7 +14,7 @@ fn _remove_duplicates(nums: &mut [i32]) -> i32 {
 }
 
 #[cfg(test)]
-mod static_array_tests {
+mod remove_duplicates_tests {
     use super::_remove_duplicates;
 
     #[test]
