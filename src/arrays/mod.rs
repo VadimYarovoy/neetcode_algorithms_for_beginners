@@ -1,2 +1,2 @@
-mod static_arrays;
 mod dynamic_arrays;
+mod static_arrays;
