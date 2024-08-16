@@ -25,3 +25,22 @@ pub fn _reverse_list(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
 
     prev
 }
+
+#[cfg(test)]
+mod reverse_list_tests {
+    use super::{ListNode, _reverse_list};
+
+    #[test]
+    fn reverse_list() {
+        let list = Some(Box::new(ListNode {
+            val: 1,
+            next: Some(Box::new(ListNode { val: 2, next: None })),
+        }));
+        let reversed_list = Some(Box::new(ListNode {
+            val: 2,
+            next: Some(Box::new(ListNode { val: 1, next: None })),
+        }));
+
+        assert_eq!(_reverse_list(list), reversed_list);
+    }
+}
