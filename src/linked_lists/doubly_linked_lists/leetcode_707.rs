@@ -31,6 +31,7 @@ struct MyNode {
 }
 
 impl MyNode {
+    #[allow(dead_code)]
     fn new(val: i32) -> Self {
         Self {
             next: ptr::null_mut(),
@@ -41,10 +42,12 @@ impl MyNode {
 }
 
 impl MyLinkedList {
+    #[allow(dead_code)]
     fn new() -> Self {
         Self::default()
     }
 
+    #[allow(dead_code)]
     fn get(&self, index: i32) -> i32 {
         if index >= self.len {
             return -1;
@@ -61,6 +64,7 @@ impl MyLinkedList {
         }
     }
 
+    #[allow(dead_code)]
     fn add_at_head(&mut self, val: i32) {
         let new_head = Box::into_raw(Box::new(MyNode::new(val)));
         let old_head = self.head;
@@ -79,6 +83,7 @@ impl MyLinkedList {
         self.len += 1;
     }
 
+    #[allow(dead_code)]
     fn add_at_tail(&mut self, val: i32) {
         let new_tail = Box::into_raw(Box::new(MyNode::new(val)));
         let old_tail = self.tail;
@@ -97,6 +102,7 @@ impl MyLinkedList {
         self.len += 1;
     }
 
+    #[allow(dead_code)]
     fn add_at_index(&mut self, index: i32, val: i32) {
         match index {
             0 => {
