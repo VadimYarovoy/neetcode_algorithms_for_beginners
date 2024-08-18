@@ -1,1 +1,2 @@
 mod factorial;
+mod fibonacci;
