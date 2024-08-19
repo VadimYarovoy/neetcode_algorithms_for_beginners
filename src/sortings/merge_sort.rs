@@ -41,7 +41,7 @@ fn merge(arr1: &[i32], arr2: &[i32], ret: &mut [i32]) {
 }
 
 #[cfg(test)]
-mod insertion_sort_tests {
+mod mergesort_sort_tests {
     use super::mergesort;
 
     #[test]
