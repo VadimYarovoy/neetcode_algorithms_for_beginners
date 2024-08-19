@@ -22,3 +22,18 @@ fn partition(arr: &mut [i32], l: isize, h: isize) -> isize {
 
     i + 1
 }
+
+#[cfg(test)]
+mod quick_sort_tests {
+    use super::quick_sort;
+
+    #[test]
+    fn sort_array() {
+        let mut arr = [1, 4, 2, 5, 3];
+        let mut arr_sorted = arr.clone();
+        arr_sorted.sort_unstable();
+        let e = arr.len() as isize - 1;
+        quick_sort(&mut arr, 0, e);
+        assert_eq!(arr_sorted, arr);
+    }
+}
